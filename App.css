@@ -1,0 +1,356 @@
+/* Reset default styles for consistency across devices */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base styles for the 2070s vibe with normal fonts */
+  .App-2070s {
+    text-align: center;
+    background: linear-gradient(135deg, #0a1422 0%, #1e2a44 100%);
+    min-height: 100vh;
+    color: #f0f0f5;
+    font-family: 'Roboto', Arial, sans-serif; /* Normal font stack */
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Header with enhanced neon and depth */
+  .App-header {
+    padding: 20px;
+    border-bottom: 2px solid #00ffcc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(10, 20, 34, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 15px rgba(0, 255, 204, 0.2);
+  }
+  
+  /* Holographic logo optimized for all screens */
+  .App-logo-holo {
+    height: 120px;
+    filter: drop-shadow(0 0 12px #00ffcc);
+    animation: App-logo-pulse 3.5s infinite ease-in-out;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  /* Neon title with perfect scaling */
+  .App-title-neon {
+    font-size: clamp(2rem, 5.5vw, 3.5rem);
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc, 0 0 15px #00ffcc, 0 0 25px #ff007a;
+    animation: neon-flicker 1.8s infinite;
+    letter-spacing: 1px;
+  }
+  
+  /* Cyber subtitle with refined glow */
+  .AppSubtitle-cyber {
+    font-size: clamp(1rem, 2.8vw, 1.3rem);
+    color: #ff007a;
+    text-shadow: 0 0 5px #ff007a;
+    margin: 12px 0;
+    font-weight: 400;
+  }
+  
+  /* Futuristic navigation with perfect alignment */
+  .App-nav-cyber {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 25px);
+    padding: 12px 0;
+    border-top: 1px solid #00ffcc;
+    background: rgba(0, 255, 204, 0.05);
+  }
+  
+  /* Nav links with smooth hover */
+  .App-nav-link {
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+    text-shadow: 0 0 5px #00ffcc;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+  }
+  
+  .App-nav-link:hover {
+    color: #ff007a;
+    text-shadow: 0 0 10px #ff007a;
+    transform: translateY(-2px);
+  }
+  
+  /* Main content grid with perfect views */
+  .App-main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: clamp(20px, 5vw, 40px);
+    max-width: 1500px;
+    margin: 0 auto;
+    perspective: 1000px;
+  }
+  
+  /* Holographic sections with enhanced polish */
+  .App-section-holo {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid #00ffcc;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.25);
+    transition: all 0.4s ease;
+    transform: translateZ(0);
+  }
+  
+  .App-section-holo:hover {
+    transform: translateY(-8px) translateZ(20px);
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+  }
+  
+  /* Section headings with perfect glow */
+  h2 {
+    color: #00ffcc;
+    text-shadow: 0 0 6px #00ffcc;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin-bottom: 15px;
+  }
+  
+  /* Inputs and buttons with futuristic finesse */
+  input {
+    margin: 8px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid #00ffcc;
+    color: #f0f0f5;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 320px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #ff007a;
+    outline: none;
+    box-shadow: 0 0 8px #ff007a;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: #ff007a;
+    color: #f0f0f5;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #ff007a;
+    transition: all 0.3s ease;
+    font-weight: 700;
+  }
+  
+  button:hover {
+    background: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px #00ffcc;
+  }
+  
+  /* Animations with perfect timing */
+  @keyframes App-logo-pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.06); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 0.9; }
+  }
+  
+  @keyframes neon-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.92; }
+  }
+  
+  /* Game-specific styles */
+  .game-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .game-display {
+    margin-top: 20px;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 5px;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  
+  .game-board.matrix {
+    grid-template-columns: repeat(4, 50px);
+  }
+  
+  .game-cell {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00ffcc;
+    color: #f0f0f5;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .game-cell:hover {
+    background: rgba(0, 255, 204, 0.2);
+  }
+  
+  .game-cell.active {
+    background: #ff007a;
+  }
+  
+  .game-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .game-area {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00ffcc;
+    overflow: hidden;
+  }
+  
+  .asteroid {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff007a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff007a;
+  }
+  
+  .player {
+    position: absolute;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    background: #00ffcc;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #00ffcc;
+  }
+  
+  .reaction-target {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #ff007a;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff007a;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Responsive Design for Perfect Views */
+  /* Small screens (iPhone, Android phones) */
+  @media (max-width: 600px) {
+    .App-header {
+      padding: 15px;
+    }
+    .App-logo-holo {
+      height: 90px;
+    }
+    .App-nav-cyber {
+      gap: 12px;
+      padding: 8px 0;
+    }
+    .App-main-grid {
+      grid-template-columns: 1fr;
+      padding: 15px;
+    }
+    .App-section-holo {
+      padding: 20px;
+    }
+    .game-board {
+      grid-template-columns: repeat(3, 50px);
+    }
+    .game-board.matrix {
+      grid-template-columns: repeat(4, 40px);
+    }
+    .game-cell {
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+    }
+    .game-area {
+      height: 300px;
+    }
+    .asteroid {
+      width: 15px;
+      height: 15px;
+    }
+    .player {
+      width: 25px;
+      height: 25px;
+    }
+    .reaction-target {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  /* Medium screens (Tablets, iPads) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .App-logo-holo {
+      height: 110px;
+    }
+    .App-main-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Large screens (Windows PC, MacBook, Linux desktops) */
+  @media (min-width: 1025px) {
+    .App-nav-cyber {
+      gap: 35px;
+    }
+    .App-main-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* High-resolution displays (Retina, 4K) */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .App-title-neon {
+      text-shadow: 0 0 4px #00ffcc, 0 0 12px #00ffcc, 0 0 20px #ff007a;
+    }
+    .App-section-holo {
+      box-shadow: 0 0 25px rgba(0, 255, 204, 0.35);
+    }
+  }
+  
+  /* Touch devices (iPhone, Android) */
+  @media (hover: none) {
+    .App-nav-link:hover,
+    .App-section-holo:hover,
+    button:hover,
+    .game-cell:hover {
+      transform: none;
+    }
+    button:active,
+    .game-cell:active {
+      background: #00ffcc;
+      box-shadow: 0 0 12px #00ffcc;
+    }
+  }
